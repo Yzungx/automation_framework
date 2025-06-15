@@ -1,3 +1,4 @@
+```
 embedded_test_automation/
 ├── config/
 │   ├── device_config.yaml        # information about relay, serial, ssh
@@ -13,3 +14,5 @@ embedded_test_automation/
 │   ├── log_parser.py             # get data by patter in log
 │   └── wait_tools.py             # timeout, retry
 ├── requirements.txt              # pyserial, paramiko, pytest, pyyaml
+
+```
