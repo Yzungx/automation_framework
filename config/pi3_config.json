@@ -1,0 +1,66 @@
+{
+  "SoC": {
+    "BCM2837": {
+      "cores": 4,
+      "architecture": "ARM Cortex-A53",
+      "cpu": {
+        "application-cpu": {
+          "name": "Cortex-A53",
+          "architecture": "ARMv8-A",
+          "cores": 4,
+          "os": "Linux",
+          "bsp": "to be filled"
+        }
+      }
+    }
+  },
+
+  "board": {
+    "raspberry_pi3": {
+      "manufacturer": "Raspberry Pi Foundation",
+      "SoC": "BCM2837",
+      "memory": {
+        "RAM": 0,
+        "eMMC": 0,
+        "sd_card": "1 slot"
+      },
+      "power": {
+        "supply": "5V DC"
+      },
+      "note": "Raspberry Pi 3 Model B"
+    }
+  },
+
+  "System_kit": {
+    "suts": ["system_2"],
+    "system_2": {
+      "server": "162",
+      "device_under_test": {
+        "raspberry_pi3": {
+          "SoC": "BCM2837",
+          "network": {
+            "interface": "end1",
+            "ip": "10.0.0.3",
+            "MAC": "ee:2f:2f:c8:94:74"
+          },
+          "serial": {
+            "name": "serial:device-file_2",
+            "type": "device-file",
+            "device-file": "/dev/usb-to-serial/xxxxxxx2",
+            "baudrate": 115200
+          },
+          "power": {
+            "name": "power:relay_2_port1",
+            "type": "relay",
+            "device": "relay_2"
+          },
+          "flash": {
+            "name": "flash:sdmux_2",
+            "type": "sdmux",
+            "device": "/dev/usb-to-sdmux/xxxxxxx2"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,8 @@
 import serial
 import time
+from typing import final
 
+@final
 class SerialController:
     def __init__(self, port, baudrate=115200, timeout=1):
         self.port = port
@@ -77,8 +79,9 @@ class SerialController:
         print("[Serial] Login successful.")
 
     def safe_exit(self, timeout: int = 10):
-        print("[Serial] Exit serial promt...")
-        self.send_command_and_get_response(command="exit", wait_for='exit', timeout=timeout)
+        if self.ser and self.ser.is_open:
+            print("[Serial] Exit serial promt...")
+            self.send_command_and_get_response(command="exit", wait_for='exit', timeout=timeout)
 
     def send_command_and_get_number_of_line(self, command, wait=1, buffer_length: int = 100):
         """Send command and get response"""

@@ -1,6 +1,9 @@
 import paramiko
 from scp import SCPClient
+from typing import final
 
+# TODO: update logger in here
+@final
 class SSHController:
     """
         SSHController provides methods to establish SSH connections, execute remote commands, 

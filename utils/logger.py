@@ -3,50 +3,21 @@ import logging
 from typing import Optional
 
 class LoggerSetup:
-    """
-    A class to set up and manage logging configuration based on command-line arguments.
 
-    Attributes:
-        log_level (str): The current log level (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL).
-        logger (logging.Logger): The configured logger instance.
-    """
-
-    def __init__(self, default_log_level: str = "INFO"):
+    @staticmethod
+    def get_logger(name: Optional[str] = None, log_level: str = "INFO") -> logging.Logger:
         """
-        Initialize the LoggerSetup with a default log level.
+        Quickly configure and return a logger with the specified log level.
 
         Args:
-            default_log_level (str): The default log level if not specified (default: INFO).
-        """
-        self.log_level = default_log_level.upper()
-        self.logger = None
-        self._setup_parser()
-
-    def _setup_parser(self) -> None:
-        """Set up the argument parser for command-line arguments."""
-        self.parser = argparse.ArgumentParser(description="A script with configurable log level.")
-        self.parser.add_argument(
-            '--log-level',
-            type=str,
-            default=self.log_level,
-            choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'],
-            help="Set the logging level (default: INFO)"
-        )
-
-    def configure_logging(self) -> None:
-        """
-        Configure the logging system based on the provided or parsed log level.
+            name (str): Logger name (__name__).
+            log_level (str): Logging level as string (DEBUG, INFO, etc.).
 
         Returns:
-            None
+            logging.Logger: Configured logger instance.
         """
-        # Parse arguments
-        args = self.parser.parse_args()
+        log_level = log_level.upper()
 
-        # Update log level from arguments
-        self.log_level = args.log_level.upper()
-
-        # Map log level to numeric value
         level_map = {
             'DEBUG': logging.DEBUG,
             'INFO': logging.INFO,
@@ -54,37 +25,27 @@ class LoggerSetup:
             'ERROR': logging.ERROR,
             'CRITICAL': logging.CRITICAL
         }
-        numeric_level = level_map.get(self.log_level, logging.INFO)
 
-        # Create or get logger
-        self.logger = logging.getLogger(__name__)
-        if not self.logger.handlers:
+        numeric_level = level_map.get(log_level, logging.INFO)
+
+        logger = logging.getLogger(name)
+
+        if not logger.handlers:
+            # Only configure once
             logging.basicConfig(
                 level=numeric_level,
-                format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                datefmt='%Y-%m-%d %H:%M:%S'
+                format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
+                datefmt="%Y-%m-%d %H:%M:%S"
             )
-            self.logger.setLevel(numeric_level)
+            logger.setLevel(numeric_level)
 
-        # Log the setup completion
-        self.logger.debug("Logging setup completed with level: %s", self.log_level)
+        return logger
 
-    def get_logger(self) -> logging.Logger:
-        """
-        Get the configured logger instance.
-
-        Returns:
-            logging.Logger: The configured logger.
-        """
-        if self.logger is None:
-            self.configure_logging()
-        return self.logger
-
-    def log_example_messages(self) -> None:
+    def log_example_messages(self, log_level: str = 'INFO') -> None:
         """
         Log example messages at different levels for demonstration.
         """
-        logger = self.get_logger()
+        logger = self.get_logger(name=__name__, log_level=log_level)
         logger.debug("This is a debug message.")
         logger.info("This is an info message.")
         logger.warning("This is a warning message.")
