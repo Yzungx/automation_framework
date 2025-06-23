@@ -1,0 +1,174 @@
+
+============================================================
+[Session Start: 2025-06-23 22:55:24]
+============================================================
+
+============================================================
+[Session Start: 2025-06-23 22:55:25]
+============================================================
+
+============================================================
+[Session Start: 2025-06-23 22:55:25]
+============================================================
+[22:55:26] [Serial] Opened port /dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_D-if00-port0 at 115200 baud.
+[22:55:26] [Serial] Sending user name...
+[22:55:29] [Serial] Response of `yzungx`:
+
+[22:55:29] [Serial] Sending password...
+[22:55:32] [Serial] Response of `1`:
+
+[22:55:32] [Serial] Verifying with 'whoami'...
+[22:55:35] [Serial] Response of `whoami`:
+
+[22:55:35] [Serial] Login successful.
+[22:55:38] [Serial] Response of `sudo reboot`:
+
+[22:55:41] [Serial] Response of `1`:
+
+
+============================================================
+[Session Start: 2025-06-23 22:55:41]
+============================================================
+
+============================================================
+[Session Start: 2025-06-23 22:59:28]
+============================================================
+
+============================================================
+[Session Start: 2025-06-23 22:59:29]
+============================================================
+
+============================================================
+[Session Start: 2025-06-23 22:59:29]
+============================================================
+[22:59:29] [Serial] Opened port /dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_D-if00-port0 at 115200 baud.
+[22:59:29] [Serial] Sending user name...
+[22:59:32] [Serial] Timeout waiting for `$` in response to `yzungx`.
+[22:59:32] [Serial] Response of `yzungx`:
+
+[22:59:32] [Serial] Sending password...
+[22:59:36] [Serial] Timeout waiting for `$` in response to `1`.
+[22:59:36] [Serial] Response of `1`:
+
+[22:59:36] [Serial] Verifying with 'whoami'...
+[22:59:39] [Serial] Timeout waiting for `$` in response to `whoami`.
+[22:59:39] [Serial] Response of `whoami`:
+
+[22:59:39] [Serial] Login successful.
+[22:59:42] [Serial] Timeout waiting for `$` in response to `sudo reboot`.
+[22:59:42] [Serial] Response of `sudo reboot`:
+
+
+============================================================
+[Session Start: 2025-06-23 23:02:39]
+============================================================
+
+============================================================
+[Session Start: 2025-06-23 23:02:39]
+============================================================
+
+============================================================
+[Session Start: 2025-06-23 23:02:40]
+============================================================
+[23:02:40] [Serial] Opened port /dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_D-if00-port0 at 115200 baud.
+[23:02:40] [Serial] Sending user name...
+[23:02:43] [Serial] Timeout waiting for `$` in response to `yzungx`.
+[23:02:43] [Serial] Response of `yzungx`:
+yzungx
+Password:
+[23:02:43] [Serial] Sending password...
+[23:02:46] [Serial] Timeout waiting for `$` in response to `1`.
+[23:02:46] [Serial] Response of `1`:
+
+[23:02:46] [Serial] Verifying with 'whoami'...
+[23:02:49] [Serial] Timeout waiting for `$` in response to `whoami`.
+[23:02:49] [Serial] Response of `whoami`:
+whoami
+
+Login incorrect
+raspberrypi login:
+[23:02:49] [Serial] Login successful.
+[23:02:52] [Serial] Timeout waiting for `$` in response to `sudo reboot`.
+[23:02:52] [Serial] Response of `sudo reboot`:
+sudo reboot
+Password:
+[23:02:55] [Serial] Response of `1`:
+Login incorrect
+raspberrypi login:
+
+============================================================
+[Session Start: 2025-06-23 23:02:55]
+============================================================
+
+============================================================
+[Session Start: 2025-06-23 23:03:06]
+============================================================
+
+============================================================
+[Session Start: 2025-06-23 23:03:07]
+============================================================
+
+============================================================
+[Session Start: 2025-06-23 23:03:07]
+============================================================
+[23:03:08] [Serial] Opened port /dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_D-if00-port0 at 115200 baud.
+[23:03:08] [Serial] Sending user name...
+[23:03:11] [Serial] Timeout waiting for `$` in response to `yzungx`.
+[23:03:11] [Serial] Response of `yzungx`:
+yzungx
+Password:
+[23:03:11] [Serial] Sending password...
+[23:03:11] [Serial] Response of `1`:
+Linux raspberrypi 6.12.25+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.25-1+rpt1 (2025-04-30) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Jun 23 22:59:50 +07 2025 on tty1
+[?2004hyzungx@raspberrypi:~$
+[23:03:11] [Serial] Verifying with 'whoami'...
+[23:03:11] [Serial] Response of `whoami`:
+whoami
+[?2004lyzungx
+[?2004hyzungx@raspberrypi:~$
+[23:03:11] [Serial] Login successful.
+[23:03:11] [Serial] Response of `sudo reboot`:
+sudo reboot
+[?2004l
+Broadcast message from root@raspberrypi on pts/0 (Mon 2025-06-23 23:03:12 +07):
+
+The system will reboot now!
+
+[?2004hyzungx@raspberrypi:~$ [?2004l[?2004h[?2004l
+
+============================================================
+[Session Start: 2025-06-23 23:03:51]
+============================================================
+
+============================================================
+[Session Start: 2025-06-23 23:03:51]
+============================================================
+
+============================================================
+[Session Start: 2025-06-23 23:03:52]
+============================================================
+[23:03:52] [Serial] Opened port /dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_D-if00-port0 at 115200 baud.
+[23:03:52] [Serial] Sending user name...
+[23:03:55] [Serial] Timeout waiting for `$` in response to `yzungx`.
+[23:03:55] [Serial] Response of `yzungx`:
+
+[23:03:55] [Serial] Sending password...
+[23:03:58] [Serial] Timeout waiting for `$` in response to `1`.
+[23:03:58] [Serial] Response of `1`:
+
+[23:03:58] [Serial] Verifying with 'whoami'...
+[23:04:01] [Serial] Timeout waiting for `$` in response to `whoami`.
+[23:04:01] [Serial] Response of `whoami`:
+
+[23:04:01] [Serial] Login successful.
+[23:04:04] [Serial] Timeout waiting for `$` in response to `sudo reboot`.
+[23:04:04] [Serial] Response of `sudo reboot`:
+

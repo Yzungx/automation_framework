@@ -4,7 +4,7 @@
       "cores": 4,
       "architecture": "ARM Cortex-A53",
       "cpu": {
-        "application-cpu": {
+        "application_cpu": {
           "name": "Cortex-A53",
           "architecture": "ARMv8-A",
           "cores": 4,
@@ -15,7 +15,7 @@
     }
   },
 
-  "board": {
+  "device_under_test": {
     "raspberry_pi3": {
       "manufacturer": "Raspberry Pi Foundation",
       "SoC": "BCM2837",
@@ -31,33 +31,44 @@
     }
   },
 
-  "System_kit": {
-    "suts": ["system_2"],
+  "system_under_test": {
     "system_2": {
       "server": "162",
       "device_under_test": {
+        "hi": {"###$$%%": "b"},
+        "pi4": {"###$$%%": "b"},
+        "power": {
+                "name": "power:relay_2_port1",
+                "type": "usbrelay",
+                "device": "relay_2"
+              },
         "raspberry_pi3": {
-          "SoC": "BCM2837",
-          "network": {
-            "interface": "end1",
-            "ip": "10.0.0.3",
-            "MAC": "ee:2f:2f:c8:94:74"
-          },
-          "serial": {
-            "name": "serial:device-file_2",
-            "type": "device-file",
-            "device-file": "/dev/usb-to-serial/xxxxxxx2",
-            "baudrate": 115200
-          },
-          "power": {
-            "name": "power:relay_2_port1",
-            "type": "relay",
-            "device": "relay_2"
-          },
-          "flash": {
-            "name": "flash:sdmux_2",
-            "type": "sdmux",
-            "device": "/dev/usb-to-sdmux/xxxxxxx2"
+          "ggg": {"###$$%%": "b"},
+          "SoC": {
+            "log_path" : "/home/yzungx/ws/automation_fw/automation_framework/tests/test_resources/serial_session.log",
+            "sss": "sss",
+            "BCM2837": {
+              "user": {
+                "account": "yzungx",
+                "password": "1"
+              },
+              "network": {
+              "interface": "end1",
+              "ip": "192.168.36.10",
+              "MAC": "ee:2f:2f:c8:94:74"
+              },
+              "serial": {
+                "name": "serial:device-file_2",
+                "type": "desvice-file",
+                "device_file": "/dev/serial/by-id/usb-Prolific_Technology_Inc._USB-Serial_Controller_D-if00-port0",
+                "baudrate": 115200
+              },
+              "flash": {
+                "name": "flash:sdmux_2",
+                "type": "sdmux",
+                "device": "/dev/usb-to-sdmux/xxxxxxx2"
+              }
+            }
           }
         }
       }

@@ -2,7 +2,7 @@ import sys
 import os
 import pytest
 
-from drivers.relay_controller import RelayController
+from drivers.relay_controller import USBRelayController
 from drivers.serial_controller import SerialController
 from drivers.ssh_controller import SSHController
 # from utils.config_loader import load_config
@@ -51,7 +51,7 @@ if __name__ == "__main__":
     }
 
     # flags = ["-s", "--tb=short" , "--log-cli-level=DEBUG"]
-    flags = ["-s", "--tb=short" , "--log-cli-level=INFO"]
+    flags = ["-s", "--tb=short"]
 
     TestExecute.run_test(test_suites=test_suites, pytest_flags=flags)
 

@@ -11,12 +11,16 @@ class Args:
 
         # Parent-level arguments
         parser.add_argument(
-            "--config", type=str, default="config/device_config.yaml",
+            "--config", type=str, default="config/pi3_config.json",
             help="Path to device configuration YAML file"
         )
         parser.add_argument(
             "--log-level", type=str, choices=["DEBUG", "INFO", "WARNING", "ERROR"],
             default="INFO", help="Logging level"
+        )
+
+        parser.add_argument(
+            "--system_testing", type=str, required=True, help="system for testing"
         )
 
         return parser

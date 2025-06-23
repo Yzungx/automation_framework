@@ -1,3 +1,8 @@
 1. update parser arg
 2. remove arg trong logger
 3. tao class cho general
+4. su dung logger cho cac class
+5. xu ly exit sau khi dung serial o teardown
+6. exception handle
+7. docstring
+8. check xem co phai do forward serial nen khi reboot bi mat ser khong
